@@ -1,8 +1,6 @@
+UserController = require('../controllers/user_controller');
 module.exports = (server) => {
-    server.get('/users', (req, res) => {
-        res.send({users:' lot of users'});
-    });
-    server.get('/user/:id', (req, res) => {
-        res.send({user:'a user id : '+req.params.id});
-    });
+    // Envoi les parametres req et res de facon cachée a votre fonction.
+    server.get('/users',UserController.getUsers);
+    server.get('/user/:id',UserController.getUser);
 }
