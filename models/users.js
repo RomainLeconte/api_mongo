@@ -22,6 +22,6 @@ UserSchema.pre('remove', function (next){
         })
 })
 
-const User = mongoose.model('user', UserSchema);
+const User = mongoose.model('user', UserSchema, 'Users_Collecion');
 
 module.exports = User;

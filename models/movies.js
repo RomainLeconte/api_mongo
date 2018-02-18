@@ -5,6 +5,6 @@ const MovieSchema = new Schema({
     title: String,
     duration: Number
 });
-const Movie = mongoose.model('movie', MovieSchema);
+const Movie = mongoose.model('movie', MovieSchema, 'Movies_Collecion');
 
 module.exports = Movie;
